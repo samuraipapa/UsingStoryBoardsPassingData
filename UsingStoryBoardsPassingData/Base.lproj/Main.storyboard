@@ -7,13 +7,13 @@
         <!--Photos-->
         <scene sceneID="3hM-5v-WZj">
             <objects>
-                <tableViewController id="NCu-bf-vVe" sceneMemberID="viewController">
+                <tableViewController id="NCu-bf-vVe" customClass="PhotosTableViewController" customModule="UsingStoryBoardsPassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zXE-Sk-QL3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ucy-Qa-kgu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ucy-Qa-kgu">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ucy-Qa-kgu" id="GaU-41-a4g">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="1095" y="483"/>
         </scene>
-        <!--View Controller-->
+        <!--Dislpay View Controller-->
         <scene sceneID="PXD-6h-bDn">
             <objects>
-                <viewController id="RPa-6i-Viu" sceneMemberID="viewController">
+                <viewController id="RPa-6i-Viu" customClass="DislpayViewController" customModule="UsingStoryBoardsPassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FwM-Ca-7Rq"/>
                         <viewControllerLayoutGuide type="bottom" id="GnM-XP-OD7"/>
@@ -56,6 +56,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonHit:" destination="RPa-6i-Viu" eventType="touchUpInside" id="TLn-Ry-UP3"/>
                                     <segue destination="Cu3-fg-MOt" kind="show" id="Gvr-2c-xva"/>
                                 </connections>
                             </button>
@@ -63,15 +64,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="currentImage" destination="BBi-QN-6td" id="Anu-t9-yHw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wer-Np-win" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1514" y="483"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="e6R-x0-JiF">
             <objects>
-                <viewController id="Cu3-fg-MOt" sceneMemberID="viewController">
+                <viewController id="Cu3-fg-MOt" customClass="InfoViewController" customModule="UsingStoryBoardsPassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XU7-7i-GDR"/>
                         <viewControllerLayoutGuide type="bottom" id="EVb-2p-t3P"/>
@@ -91,11 +95,17 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonHit2:" destination="Cu3-fg-MOt" eventType="touchUpInside" id="WSG-4q-5R0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myLabel" destination="bRf-L8-uRR" id="qs3-B2-Bpr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NW1-xb-Q1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

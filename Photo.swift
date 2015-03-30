@@ -15,4 +15,5 @@ class Photo: NSObject {
     var name: String?
     var fileName : String?
     var notes: String?
+    var realName = "The Real Name"
 }
