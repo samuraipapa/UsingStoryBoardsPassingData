@@ -9,6 +9,7 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    @IBOutlet weak var labelNotes: UILabel!
 
     var currentPhoto: Photo?
 
@@ -20,6 +21,11 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var myObject = currentPhoto!
+        print(myObject.notes)
+        
+        myLabel.text = myObject.notes
 
         // Do any additional setup after loading the view.
     }

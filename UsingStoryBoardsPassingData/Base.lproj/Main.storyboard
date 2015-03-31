@@ -118,6 +118,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="labelNotes" destination="bRf-L8-uRR" id="mhT-qy-g6h"/>
                         <outlet property="myLabel" destination="bRf-L8-uRR" id="qs3-B2-Bpr"/>
                     </connections>
                 </viewController>
