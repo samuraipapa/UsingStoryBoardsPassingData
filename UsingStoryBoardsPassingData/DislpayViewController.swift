@@ -12,6 +12,8 @@ class DislpayViewController: UIViewController {
 
     var currentPhoto = Photo()
     
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelNotes: UILabel!
     @IBOutlet weak var currentImage: UIImageView!
     
     @IBAction func buttonHit(sender: UIButton) {
@@ -19,12 +21,19 @@ class DislpayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
+        //1
         
         // Last Section in Video
-        var filename = currentPhoto.fileName!
-        var image = UIImage(named: filename )
+        var filename = currentPhoto.fileName
+        var image = UIImage(named: filename! )
         currentImage.image = image
         
+        
+        // 2
+        labelName.text = filename
+        
+        var notes = currentPhoto.notes
+        labelNotes.text = notes
         
         
         // Do any additional setup after loading the view.

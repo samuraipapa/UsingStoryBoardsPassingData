@@ -49,6 +49,9 @@ class PhotosTableViewController: UITableViewController {
         println("photos[2]: \(photos[2].name) ")
 
         
+        //4
+        
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -129,13 +132,15 @@ class PhotosTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController as "yourViewContollerInQuestion".
         
         var secondScene = segue.destinationViewController as DislpayViewController
 
-        if let indexPath =  self.tableView.indexPathForSelectedRow() {
-            let selectedPhoto = photos[indexPath.row]
+        // Pass the selected object to the new view controller.
+        // you can use self.tableView.indexPathForSelectedRow()
+
+        if let indexPathy =  self.tableView.indexPathForSelectedRow() {
+            let selectedPhoto = photos[indexPathy.row]
             secondScene.currentPhoto = selectedPhoto
         }
     }
